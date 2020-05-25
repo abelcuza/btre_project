@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css' %}">
+
+    <title>BT Real Estate</title>
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
