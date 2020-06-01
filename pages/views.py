@@ -14,10 +14,11 @@ def index(request):
             'bedroom_choices': bedroom_choices,
             'state_choices': state_choices,
             'price_choices': price_choices
-            }
+        }
 
         return render(request, 'pages/index.html', context)
-        
+
+
 def about(request):
     realtors = Realtor.objects.order_by('id')
     photos = {'realtors': realtors}

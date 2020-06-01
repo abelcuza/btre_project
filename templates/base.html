@@ -21,29 +21,29 @@
 </head>
 
 <body>
-    <!-- Top Bar Section -->
-    <section id="top-bar" class="p-3">
-        {% include "partials/_topbar.html" %}
-    </section>
+<!-- Top Bar Section -->
+<section id="top-bar" class="p-3">
+    {% include "partials/_topbar.html" %}
+</section>
 
-    <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        {% include "partials/_navbar.html" %}
-    </nav>
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    {% include "partials/_navbar.html" %}
+</nav>
 
-    <!-- Content Section -->
-    {% block content %} {% endblock %}
+<!-- Content Section -->
+{% block content %} {% endblock %}
 
-    <!-- Footer Section -->
-    <footer id="main-footer" class="py-4 bg-primary text-white text-center">
-        {% include "partials/_footer.html" %}
-    </footer>
+<!-- Footer Section -->
+<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+    {% include "partials/_footer.html" %}
+</footer>
 
-    <!-- Scripts -->
-    <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
-    <script src="{% static 'js/lightbox.min.js' %} "></script>
-    <script src="{% static 'js/main.js' %} "></script>
+<!-- Scripts -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+<script src="{% static 'js/lightbox.min.js' %} "></script>
+<script src="{% static 'js/main.js' %} "></script>
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block title%}
+    BTRE Admin Area
+{% endblock %}
+
+{% block branding %}
+    <h1 id="head">
+        <img class="brand_img" src="{% static 'img/logo.png'%}" height="50" width="80" alt="BT Real State">
+        Admin Area
+    </h1>
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
