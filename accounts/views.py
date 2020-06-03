@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib import auth
 from listings.models import Listing
+from contacts.models import Contact
 
 
 def login(request):
@@ -71,8 +72,8 @@ def logout(request):
 
 
 def dashboard(request):
-    listings = Listing.objects.order_by('-list_date')
+    user_contact = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
     context = {
-        listings: 'listings'
+        'contacts': user_contact
     }
     return render(request, 'accounts/dashboard.html', context)

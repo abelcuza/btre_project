@@ -133,6 +133,14 @@ MEDIA_URL = '/media/'
 # Messages
 
 from django.contrib.messages import constants as messages
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+# Email config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'admin@example.com'
+EMAIL_HOST_PASSWORD = 'qweqweqwe'
+EMAIL_USE_TLS = True

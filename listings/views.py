@@ -24,13 +24,6 @@ def listing(request, listing_id):
         context = {'listing': listing, 'realtor': realtor}
         return render(request, 'listings/listing.html', context)
 
-    elif request.method == 'POST':
-        property = request.POST.get('listing')
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
-
 
 def search(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)
