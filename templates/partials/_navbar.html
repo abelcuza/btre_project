@@ -32,23 +32,37 @@
             </li>
         </ul>
         <!-- Right Navs -->
+
         <ul class="navbar-nav ml-auto">
-            <li{% if 'register' in request.path %}
-                class="nav-item active mr-3"
+            {% if user.is_authenticated %}
+                <li class="nav-item mr-3">
+                    <a href="{% url 'dashboard' %}" class="nav-link active">Hello <strong>{{ user.username }}
+                    (Dashboard)</strong></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="{% url 'logout' %}">
+                        <i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </a>
+                </li>
             {% else %}
-                class="nav-item mr-3"
-            {% endif %}>
-                <a class="nav-link" href="{% url 'register' %}">
-                    <i class="fas fa-user-plus"></i> Register</a>
-            </li>
-            <li{% if 'login' in request.path %}
-                class="nav-item active mr-3"
-            {% else %}
-                class="nav-item mr-3"
-            {% endif %}>
-                <a class="nav-link" href="{% url 'login' %}">
-                    <i class="fas fa-sign-in-alt"></i>Login</a>
-            </li>
+                <li{% if 'register' in request.path %}
+                    class="nav-item active mr-3"
+                {% else %}
+                    class="nav-item mr-3"
+                {% endif %}>
+                    <a class="nav-link" href="{% url 'register' %}">
+                        <i class="fas fa-user-plus"></i> Register</a>
+                </li>
+                <li{% if 'login' in request.path %}
+                    class="nav-item active mr-3"
+                {% else %}
+                    class="nav-item mr-3"
+                {% endif %}>
+                    <a class="nav-link" href="{% url 'login' %}">
+                        <i class="fas fa-sign-in-alt"></i>Login</a>
+                </li>
+            {% endif %}
         </ul>
+
     </div>
 </div>

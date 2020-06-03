@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+
+{% block title %}
+    {{ listing.title }}
+{% endblock %}
 {{% block content %}
 
     <!-- Listing Header -->
